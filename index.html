@@ -1,1 +1,449 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>홈 | 포근냥 호텔</title><link rel="stylesheet" href="style.css"></head><body><header><div class="wrap nav"><a class="logo" href="index.html"><b>🐾</b> 포근냥 호텔</a><button class="toggle" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button><nav class="menu"><a class="active" href="index.html">홈</a><a class="" href="about.html">자기소개</a><a class="" href="hotel.html">호텔소개</a><a class="" href="guestbook.html">방명록</a></nav></div></header><main><section class="hero"><div class="wrap hero-grid"><div><span class="tag">🌿 CAT HOTEL · A LITTLE REST</span><h1>낯선 하루도<br>포근하게,<br><em>우리 아이의 작은 여행</em></h1><p>사랑하는 고양이가 익숙한 집처럼 편안하게 머물 수 있도록. 포근냥 호텔은 세심한 돌봄과 따뜻한 마음으로 아이들의 하루를 함께합니다.</p><div class="actions"><a class="btn primary" href="hotel.html">호텔 둘러보기 →</a><a class="btn secondary" href="guestbook.html">인사 남기기</a></div></div><img class="hero-img" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&q=85" alt="햇살 속 고양이"></div></section><section class="section"><div class="wrap"><div class="head"><div class="eyebrow">WHY POGEUNNYANG</div><h2>우리 호텔이 특별한 이유</h2><p>작은 몸짓 하나도 놓치지 않는 마음으로 돌봅니다.</p></div><div class="cards"><article class="card"><div class="icon">🏡</div><h3>아늑한 개인 공간</h3><p>아이마다 편안한 휴식 공간을 마련하고 낯선 환경에 천천히 적응하도록 도와요.</p></article><article class="card"><div class="icon">🧸</div><h3>세심한 일상 케어</h3><p>식사와 놀이, 휴식 시간을 아이의 성향과 생활 습관에 맞춰 살펴요.</p></article><article class="card"><div class="icon">💌</div><h3>보호자와 소통</h3><p>머무는 동안 아이의 컨디션과 일상을 공유해 보호자도 안심할 수 있게 해요.</p></article></div></div></section><div class="wrap"><section class="banner"><div><h2>우리 아이의 편안한 여행을 준비해요 🐈</h2><p>궁금한 점이나 예약 상담이 필요하다면 언제든 편하게 문의해 주세요.</p></div><a class="btn primary" href="hotel.html">호텔 안내 보기 →</a></section></div></main><footer><div class="wrap foot"><div><b>🐾 포근냥 호텔</b><br>고양이의 하루가 편안하고 행복하도록</div><div>운영시간 매일 09:00–20:00 · 예약 및 문의는 별도 상담<br>© 2026 POGEUNNYANG HOTEL</div></div></footer></body></html>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포근냥 고양이 호텔</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #fffaf4;
+  color: #554d49;
+  line-height: 1.7;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-family: 'Jua', sans-serif;
+  font-size: 27px;
+  color: #8ebba8;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #665e58;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  color: #e59eaa;
+}
+
+.page {
+  display: none;
+  min-height: 75vh;
+  animation: fadeIn .4s ease;
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 75px 8%;
+  background: #f1f7ef;
+}
+
+.hero-content,
+.hero-image {
+  flex: 1;
+}
+
+.hero h1, .page h1 {
+  font-family: 'Jua', sans-serif;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.4;
+  margin: 18px 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 35px;
+}
+
+.tag {
+  color: #d88e9d;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.btn {
+  display: inline-block;
+  background: #e9aeb7;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #d88e9d;
+}
+
+.intro, .content {
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(120,100,80,.07);
+  margin: 20px 0;
+}
+
+.card h2, .card h3 {
+  font-family: 'Jua', sans-serif;
+  margin-bottom: 12px;
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 15px;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
+
+.content > p {
+  margin-bottom: 25px;
+}
+
+.page-image {
+  width: min(100%, 750px);
+  height: 300px;
+  object-fit: cover;
+  border-radius: 28px;
+  margin: 25px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #eaded5;
+  border-radius: 14px;
+  font: inherit;
+  background: #fffdfb;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.guest-list {
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #f7eee7;
+  color: #8d8178;
+  font-size: 13px;
+}
+
+@media(max-width:700px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 45px 7%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .intro, .content {
+    padding: 45px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🐾 포근냥 호텔</div>
+  <nav>
+    <a class="active" onclick="showPage('home', this)">홈</a>
+    <a onclick="showPage('about', this)">자기소개</a>
+    <a onclick="showPage('hotel', this)">호텔소개</a>
+    <a onclick="showPage('guestbook', this)">방명록</a>
+  </nav>
+</header>
+
+<!-- 홈 -->
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="hero-content">
+      <span class="tag">WELCOME TO POGEUNNYANG</span>
+      <h1>고양이에게는 편안한 휴식을,<br>집사에게는 안심을 🐱</h1>
+      <p>사랑스러운 고양이들을 위한 따뜻하고 포근한 공간</p>
+      <button class="btn" onclick="showPage('hotel')">호텔 구경하기 →</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=900" alt="귀여운 고양이">
+    </div>
+  </div>
+
+  <div class="intro">
+    <h2>우리 아이의 특별한 하루 🌷</h2>
+    <p>세심한 돌봄과 아늑한 공간으로 행복한 시간을 선물합니다.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h2>🌷 아늑한 공간</h2>
+        <p>편안하게 쉴 수 있는 독립적인 휴식 공간</p>
+      </div>
+      <div class="card">
+        <h2>🐾 세심한 케어</h2>
+        <p>아이의 성향에 맞춘 따뜻한 돌봄</p>
+      </div>
+      <div class="card">
+        <h2>💗 안심하는 집사</h2>
+        <p>소중한 가족을 믿고 맡길 수 있는 호텔</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 자기소개 -->
+<section id="about" class="page">
+  <div class="content">
+    <span class="tag">ABOUT US</span>
+    <h1>안녕하세요, 포근냥입니다! 🐱</h1>
+
+    <img class="page-image"
+      src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1000"
+      alt="고양이">
+
+    <div class="card">
+      <h2>고양이를 사랑하는 마음으로</h2>
+      <p>
+        포근냥 호텔은 고양이들이 낯선 환경에서도
+        편안하게 머물 수 있도록 고민하며 만들어진 공간입니다.
+        아이들 한 마리 한 마리의 성격과 생활 습관을 존중하고,
+        보호자분들이 안심할 수 있도록 정성을 다하겠습니다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>우리의 약속 💗</h2>
+      <p>첫째, 고양이의 안전을 가장 먼저 생각합니다.</p>
+      <p>둘째, 아이들의 개별적인 성향을 존중합니다.</p>
+      <p>셋째, 사랑과 정성을 담아 돌보겠습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 호텔소개 -->
+<section id="hotel" class="page">
+  <div class="content">
+    <span class="tag">OUR HOTEL</span>
+    <h1>포근냥의 특별한 공간 🌼</h1>
+    <p>고양이들이 편안하게 머물 수 있도록 준비했어요.</p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=700" alt="스탠다드룸">
+        <h2>스탠다드룸</h2>
+        <p>아늑하고 조용한 개인 휴식 공간</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=700" alt="플레이룸">
+        <h2>플레이룸</h2>
+        <p>장난감과 캣타워가 마련된 놀이 공간</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?w=700" alt="프리미엄룸">
+        <h2>프리미엄룸</h2>
+        <p>더 넓고 여유로운 특별 휴식 공간</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>기본 케어 서비스 🐾</h2>
+      <p>식사 및 음수 관리 · 화장실 청결 관리</p>
+      <p>놀이 및 휴식 시간 · 보호자 소식 전달</p>
+    </div>
+  </div>
+</section>
+
+<!-- 방명록 -->
+<section id="guestbook" class="page">
+  <div class="content">
+    <span class="tag">GUESTBOOK</span>
+    <h1>따뜻한 이야기를 남겨주세요 💌</h1>
+    <p>포근냥 호텔에 방문해 주셔서 감사합니다!</p>
+
+    <div class="card">
+      <form id="guestForm">
+        <input id="guestName" type="text"
+          placeholder="이름을 입력해주세요" required>
+
+        <textarea id="guestMessage"
+          placeholder="따뜻한 한마디를 남겨주세요" required></textarea>
+
+        <button class="btn" type="submit">방명록 남기기</button>
+      </form>
+    </div>
+
+    <div id="guestList" class="guest-list"></div>
+  </div>
+</section>
+
+<footer>
+  © 2026 포근냥 호텔 · 모든 고양이는 사랑받을 자격이 있어요. 🐾
+</footer>
+
+<script>
+// 페이지 전환
+function showPage(pageId, clickedLink) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+
+  document.getElementById(pageId).classList.add('active');
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.classList.remove('active');
+  });
+
+  if (clickedLink) {
+    clickedLink.classList.add('active');
+  } else {
+    const links = [...document.querySelectorAll('nav a')];
+    const index = ['home', 'about', 'hotel', 'guestbook'].indexOf(pageId);
+    if (links[index]) links[index].classList.add('active');
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// 방명록 기능
+const form = document.getElementById('guestForm');
+const list = document.getElementById('guestList');
+
+let guests = JSON.parse(
+  localStorage.getItem('pogeunnyangGuests') || '[]'
+);
+
+function renderGuests() {
+  list.innerHTML = '';
+
+  guests.forEach(guest => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const name = document.createElement('h3');
+    name.textContent = '🐾 ' + guest.name;
+
+    const message = document.createElement('p');
+    message.textContent = guest.message;
+
+    card.append(name, message);
+    list.appendChild(card);
+  });
+}
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('guestName').value.trim();
+  const message = document.getElementById('guestMessage').value.trim();
+
+  if (!name || !message) return;
+
+  guests.unshift({ name, message });
+
+  localStorage.setItem(
+    'pogeunnyangGuests',
+    JSON.stringify(guests)
+  );
+
+  form.reset();
+  renderGuests();
+});
+
+renderGuests();
+</script>
+
+</body>
+</html>
+
